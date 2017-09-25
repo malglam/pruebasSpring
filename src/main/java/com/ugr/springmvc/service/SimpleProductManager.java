@@ -2,28 +2,28 @@
 
 package com.ugr.springmvc.service;
 
-import com.ugr.springmvc.domain.Product;
+import com.ugr.springmvc.domain.Precios;
 import java.util.List;
 
 public class SimpleProductManager implements ProductManager {
 
     private static final long serialVersionUID = 1L;
     
-    private List<Product> products;
+    private List<Precios> products;
         
     @Override
     public void increasePrice(int percentage) {
         if (products != null) {
-            for (Product product : products) {
-                double newPrice = product.getPrice() * 
+            for (Precios product : products) {
+                double newPrice = product.getPrecio() * 
                                     (100 + percentage)/100;
-                product.setPrice(newPrice);
+                product.setPrecio(newPrice);
             }
         }
     }
 
     @Override
-    public List<Product> getProducts() {
+    public List<Precios> getProducts() {
         return products;
     }
     
@@ -31,7 +31,7 @@ public class SimpleProductManager implements ProductManager {
      *
      * @param products
      */
-    public void setProducts(List<Product> products) {
+    public void setProducts(List<Precios> products) {
         this.products = products;
     }
 

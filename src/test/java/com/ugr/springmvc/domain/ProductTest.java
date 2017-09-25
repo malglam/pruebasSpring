@@ -18,27 +18,27 @@ import static org.junit.Assert.*;
  */
 public class ProductTest {
     
-    private Product product;
+    private Precios product;
 
     @Before
     public void setUp() throws Exception {
-        product = new Product();
+        product = new Precios();
     }
 
     @Test
     public void testSetAndGetDescription() {
         String testDescription = "aDescription";
-        assertNull(product.getDescription());
-        product.setDescription(testDescription);
-        assertEquals(testDescription, product.getDescription());
+        assertNull(product.getDescripcion());
+        product.setDescripcion(testDescription);
+        assertEquals(testDescription, product.getDescripcion());
     }
 
     @Test
     public void testSetAndGetPrice() {
         double testPrice = 100.00;
         assertEquals(0, 0, 0);    
-        product.setPrice(testPrice);
-        assertEquals(testPrice, product.getPrice(), 0);
+        product.setPrecio(testPrice);
+        assertEquals(testPrice, product.getPrecio(), 0);
     }
     
 }
